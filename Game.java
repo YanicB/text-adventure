@@ -1,19 +1,23 @@
 import java.awt.Color;
-import java.awt.Container;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Game extends JFrame {
 
   public static final int WIDTH = 800;
   public static final int HEIGHT = 600;
-  Container content;
 
+  // No parameter Constructor.
   public Game() {
-    super("My Adventure Game");
+    super("Adventure Game");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    getContentPane().setBackground(Color.BLACK);
     setSize(WIDTH, HEIGHT);
+    getContentPane().setBackground(Color.BLACK);
     setVisible(true);
-    content = getContentPane();
+    // Make Title Page
+    JPanel titleNamePanel = new JPanel();
+    titleNamePanel.setBounds(100, 100, 600, 150);
+    titleNamePanel.setBackground(Color.BLUE);
+    add(titleNamePanel);
   }
 }
